@@ -11,10 +11,10 @@ export const RESUME_DATA: ResumeData = {
   about:
     "Experienced Staff Software Engineer focused on building high-quality software in a timely manner. ",
   summary:
-    "I helped multiple teams to significantly improve their developer experience and time to market." +
+    "I helped multiple teams to significantly improve their developer experience and time to market. " +
     "I have experience leading development of applications in multiple domain areas including e-commerce, " +
-    "multimedia, dating, AR and food delivery." +
-    "I'm proficient in using modern development stack and working in an agile environment" +
+    "multimedia, dating, AR and food delivery. " +
+    "I'm proficient in using modern development stack and working in an agile environment. " +
     "Currently, I work mostly with Kotlin, Jetpack Compose, Kotlinx Coroutines and MVI. " +
     "I have over 8 years of experience in building mobile applications.",
   avatarUrl: "https://avatars.githubusercontent.com/u/668727?v=4",
