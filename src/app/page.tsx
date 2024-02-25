@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
@@ -11,7 +11,7 @@ import { ProjectCard } from "@/components/project-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
+  description: RESUME_DATA.summary
 };
 
 export default function Page() {
@@ -87,7 +87,7 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-28">
+          <Avatar className="size-44">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
@@ -110,6 +110,8 @@ export default function Page() {
                         {work.company}
                       </a>
 
+                      {/*<work.logo className="size-4" />*/}
+
                       <span className="inline-flex gap-x-1">
                         {work.badges.map((badge) => (
                           <Badge
@@ -131,8 +133,20 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
+                <CardContent className="mt-2 accent-gray-800">
+                  {work.summary && (
+                    <h4 className={"leading-5"}>{work.summary}</h4>
+                  )}
+                  {work.summary && work.bullets?.length && (
+                    <div className="mt-2" />
+                  )}
+                  {work.bullets?.length && (
+                    <ul className="list-disc list-inside text-s text-accent-foreground">
+                      {work.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
                 </CardContent>
               </Card>
             );
@@ -160,41 +174,50 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
-            })}
-          </div>
+          {Object.entries(RESUME_DATA.skills).map(([category, skills]) => {
+            return (
+              <>
+                <h3 className="text-lg font-semibold">{category}</h3>
+                <div className="flex flex-wrap gap-1">
+                  {skills.map((skill) => {
+                    return <Badge key={skill}>{skill}</Badge>;
+                  })}
+                </div>
+              </>
+            );
+          })}
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
-                />
-              );
-            })}
-          </div>
-        </Section>
+        {RESUME_DATA.projects.length > 0 && (
+          <Section className="print-force-new-page scroll-mb-16">
+            <h2 className="text-xl font-bold">Projects</h2>
+            <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+              {RESUME_DATA.projects.map((project) => {
+                return (
+                  <ProjectCard
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    tags={project.techStack}
+                    link={project.link?.href ?? undefined}
+                  />
+                );
+              })}
+            </div>
+          </Section>
+        )}
       </section>
 
       <CommandMenu
         links={[
           {
             url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
+            title: "Personal Website"
           },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
             url: socialMediaLink.url,
-            title: socialMediaLink.name,
-          })),
+            title: socialMediaLink.name
+          }))
         ]}
       />
     </main>
