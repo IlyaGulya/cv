@@ -42,7 +42,7 @@ export const RESUME_DATA: ResumeData = {
   },
   education: [
     {
-      school: "Novosibirsk State Technical University",
+      school: "Siberian state university of telecommunications and informatics",
       degree: "Bachelor's Degree in Infocommunication technologies and communication systems",
       start: "2012",
       end: "2016"
