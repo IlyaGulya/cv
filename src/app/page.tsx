@@ -11,7 +11,7 @@ import { ProjectCard } from "@/components/project-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary
+  description: RESUME_DATA.summary,
 };
 
 export default function Page() {
@@ -87,7 +87,7 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-44">
+          <Avatar className="ms-4 size-44">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
@@ -136,6 +136,13 @@ export default function Page() {
                 <CardContent className="mt-2 accent-gray-800">
                   {work.summary && (
                     <h4 className={"leading-5"}>{work.summary}</h4>
+                  )}
+                  {work.techStack?.length && (
+                    <>
+                      <label className="block mt-2 text-xs text-accent-foreground">
+                        <b>Tech Stack:</b> {work.techStack.join(", ")}
+                      </label>
+                    </>
                   )}
                   {work.summary && work.bullets?.length && (
                     <div className="mt-2" />
@@ -212,12 +219,12 @@ export default function Page() {
         links={[
           {
             url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website"
+            title: "Personal Website",
           },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
             url: socialMediaLink.url,
-            title: socialMediaLink.name
-          }))
+            title: socialMediaLink.name,
+          })),
         ]}
       />
     </main>

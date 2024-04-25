@@ -28,6 +28,7 @@ export type Work = {
   start: string;
   end: string;
   summary?: string;
+  techStack?: string[];
   bullets?: string[];
 };
 
