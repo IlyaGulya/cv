@@ -6,7 +6,7 @@ import { ResumeData } from "@/data/types";
 export const RESUME_DATA: ResumeData = {
   name: "Ilya Gulya",
   initials: "IG",
-  location: "Almaty, Kazakhstan, UTC+6",
+  location: "Almaty, Kazakhstan, UTC+5",
   locationLink: "https://www.google.com/maps/place/Almaty",
   about:
     "Experienced Staff Software Engineer focused on building high-quality software in a timely manner. ",
