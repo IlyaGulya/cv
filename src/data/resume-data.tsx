@@ -52,7 +52,7 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Qantor",
       link: "https://qantor.ru/",
-      badges: ["Remote"],
+      badges: [],
       title: "Staff Software Engineer",
       logo: QantorIcon,
       start: "2023",
@@ -88,7 +88,7 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Qantor",
       link: "https://qantor.ru/",
-      badges: ["Remote"],
+      badges: [],
       title: "Staff Software Engineer | Engineering Manager - Mobile",
       logo: QantorIcon,
       start: "2021",
@@ -125,7 +125,7 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Yandex",
       link: "https://yandex.com",
-      badges: ["Remote"],
+      badges: [],
       title: "Staff Software Engineer",
       logo: YandexIcon,
       start: "2019",
