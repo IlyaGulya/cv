@@ -6,44 +6,45 @@ import { ResumeData } from "@/data/types";
 export const RESUME_DATA: ResumeData = {
   name: "Ilya Gulya",
   initials: "IG",
-  location: "Almaty, Kazakhstan, UTC+5",
+  location: "Almaty, Kazakhstan",
   locationLink: "https://www.google.com/maps/place/Almaty",
+  timezone: "UTC+5",
   about:
     "Experienced Staff Software Engineer focused on building high-quality software in a timely manner. ",
-  summary:
-    "I helped multiple teams to significantly improve their developer experience and time to market. " +
-    "I have experience leading development of applications in multiple domain areas including e-commerce, " +
-    "multimedia, dating, AR and food delivery. " +
-    "I'm proficient in using modern development stack and working in an agile environment. " +
-    "Currently, I work mostly with Kotlin, Jetpack Compose, Kotlinx Coroutines and MVI. " +
-    "I have over 9 years of experience in building mobile applications.",
+  summary: (<span>
+    Staff Software Engineer with over 9 years of experience in Android and cross-platform development.
+    Seeking full-time Staff Software Engineer roles.
+    I have experience leading development of applications in multiple domain areas including e-commerce,
+    VOIP, multimedia, dating, AR and food delivery.
+  </span>),
   avatarUrl: "https://avatars.githubusercontent.com/u/668727?v=4",
   personalWebsiteUrl: "https://gulya.me",
   contact: {
     email: "ilya@gulya.me",
-    tel: "+77053620399",
+    tel: "+7(705) 362-0399",
     social: [
-      {
-        name: "GitHub",
-        url: "https://github.com/IlyaGulya",
-        icon: GitHubIcon,
-      },
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/IlyaGulya/",
         icon: LinkedInIcon,
       },
       {
+        name: "GitHub",
+        url: "https://github.com/IlyaGulya",
+        icon: GitHubIcon,
+      },
+      {
         name: "Twitter",
         url: "https://twitter.com/IlyaGulya",
         icon: TwitterIcon,
+        hideForPrint: true,
       },
     ],
   },
   education: [
     {
       school: "Siberian state university of telecommunications and informatics",
-      degree: "Bachelor's Degree in Infocommunication technologies and communication systems",
+      degree: "Bachelor of Infocommunication technologies",
       start: "2012",
       end: "2016",
     },
@@ -51,11 +52,12 @@ export const RESUME_DATA: ResumeData = {
   work: [
     {
       company: "Qantor",
+      location: "Almaty, Kazakhstan",
       link: "https://qantor.ru/",
       badges: [],
       title: "Staff Software Engineer",
       logo: QantorIcon,
-      start: "2023",
+      start: "February 2023",
       end: "Present",
       summary: "Leading the ongoing development of e-commerce platform",
       bullets: [
@@ -87,12 +89,13 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Qantor",
+      location: "Almaty, Kazakhstan",
       link: "https://qantor.ru/",
       badges: [],
       title: "Staff Software Engineer | Engineering Manager - Mobile",
       logo: QantorIcon,
-      start: "2021",
-      end: "2023",
+      start: "November 2021",
+      end: "February 2023",
       summary: `Led the ongoing
         development of customer and employee applications for largest jewellery store in Russia. 
         I've managed both the Android and iOS development teams.`,
@@ -124,12 +127,13 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Yandex",
+      location: "Moscow, Russia",
       link: "https://yandex.com",
       badges: [],
       title: "Staff Software Engineer",
       logo: YandexIcon,
-      start: "2019",
-      end: "2021",
+      start: "March 2019",
+      end: "November 2021",
       summary: `My role involved guiding the technical direction of the Yandex.Eats Android 
        team. This included, but was not limited to: architectural decisions, 
        refactoring planning, configuration and performance management 
@@ -163,12 +167,13 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "i20.biz",
+      location: "Novosibirsk, Russia",
       link: "https://i20.biz",
       title: "Senior Android Developer | Engineering Manager - Mobile",
       badges: [],
       logo: null,
-      start: "2017",
-      end: "2019",
+      start: "June 2017",
+      end: "March 2019",
       techStack: [
         "Kotlin",
         "RxJava",
@@ -189,6 +194,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "i20.biz",
+      location: "Novosibirsk, Russia",
       link: "https://i20.biz",
       badges: [],
       techStack: [
@@ -209,17 +215,18 @@ export const RESUME_DATA: ResumeData = {
       ],
       title: "Android Developer",
       logo: null,
-      start: "2015",
-      end: "2017",
+      start: "May 2015",
+      end: "June 2017",
     },
   ],
   skills: {
     "Core": [
       "Kotlin",
       "Java",
+      "Kotlin Multiplatform",
       "Kotlin Coroutines",
       "Coroutines Flow",
-      "KMP",
+      "SQLite",
       "RxJava",
     ],
     "CI/CD": [
@@ -231,21 +238,19 @@ export const RESUME_DATA: ResumeData = {
     "Android": [
       "Android SDK",
       "Jetpack Compose",
-      "Compose Multiplatform",
       "MVIKotlin",
       "Decompose",
-      "Android Architecture Components",
-      "OkHttp",
-      "Retrofit",
-      "Gson",
-      "Moshi",
-      "kotlinx.serialization",
-      "SQLite",
-      "Room",
-      "SQLDelight",
-      "Realm",
-      "Jetpack Navigation",
-      "Cicerone",
+      "Android Arch Components",
+      // "OkHttp",
+      // "Retrofit",
+      // "Gson",
+      // "Moshi",
+      // "kotlinx.serialization",
+      // "Room",
+      // "SQLDelight",
+      // "Realm",
+      // "Jetpack Navigation",
+      // "Cicerone",
     ],
     "System Design": [
       "SOLID",
@@ -254,17 +259,18 @@ export const RESUME_DATA: ResumeData = {
       "UDF",
       "MVP",
       "MVVM",
-      "REST API",
+      // "REST API",
       "Multi-module projects",
     ],
-    "Dependency Injection": [
+    "DI": [
       "Dagger 2",
-      "Hilt",
       "Anvil",
+      "Hilt",
       "Koin",
       "Toothpick",
     ],
     "Cross-platform": [
+      "Compose Multiplatform",
       "React Native",
       "Flutter",
       "MobX",

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 export type SocialLink = {
   name: string;
   url: string;
   icon: any; // Replace 'any' with the actual type of your icons if available
+  hideForPrint?: boolean;
 };
 
 export type Contact = {
@@ -21,6 +22,7 @@ export type Education = {
 
 export type Work = {
   company: string;
+  location: string;
   link: string;
   badges: string[];
   title: string;
@@ -50,8 +52,9 @@ export type ResumeData = {
   readonly initials: string;
   readonly location: string;
   readonly locationLink: string;
+  readonly timezone: string;
   readonly about: string;
-  readonly summary: string;
+  readonly summary: ReactNode;
   readonly avatarUrl: string;
   readonly personalWebsiteUrl: string;
   readonly contact: Contact;
