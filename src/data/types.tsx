@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 export type SocialLink = {
   name: string;
   url: string;
-  icon: any; // Replace 'any' with the actual type of your icons if available
+  icon?: React.FC; // Replace 'any' with the actual type of your icons if available
   hideForPrint?: boolean;
 };
 
@@ -26,12 +26,12 @@ export type Work = {
   link: string;
   badges: string[];
   title: string;
-  logo: any; // Replace 'any' with the actual type of your logos if available
+  logo: React.FC | null; // Replace 'any' with the actual type of your logos if available
   start: string;
   end: string;
   summary?: string;
   techStack?: string[];
-  bullets?: string[];
+  bullets?: ReactNode[];
 };
 
 export type ProjectLink = {
