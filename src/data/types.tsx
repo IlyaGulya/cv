@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, SVGProps } from "react";
 
 export type SocialLink = {
   name: string;
@@ -31,7 +31,7 @@ export type Work = {
   end: string;
   summary?: string;
   techStack?: string[];
-  bullets?: ReactNode[];
+  bullets?: string[];
 };
 
 export type ProjectLink = {

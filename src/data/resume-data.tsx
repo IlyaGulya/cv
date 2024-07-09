@@ -23,10 +23,10 @@ export const RESUME_DATA: ResumeData = {
     email: "ilya@gulya.me",
     tel: "+7(705) 362-0399",
     social: [
-      {
-        name: "My blog",
-        url: "https://gulya.me",
-      },
+      // {
+      //   name: "My blog",
+      //   url: "https://gulya.me",
+      // },
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/IlyaGulya/",
