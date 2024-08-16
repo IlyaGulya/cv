@@ -1,9 +1,9 @@
-import React, { ReactNode, SVGProps } from "react";
+import React, { ReactNode } from "react";
 
 export type SocialLink = {
   name: string;
   url: string;
-  icon?: React.FC; // Replace 'any' with the actual type of your icons if available
+  icon?: React.FC<any>; // Replace 'any' with the actual type of your icons if available
   hideForPrint?: boolean;
 };
 
