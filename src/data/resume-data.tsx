@@ -2,6 +2,7 @@ import { QantorIcon, YandexIcon } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { TwitterIcon } from "lucide-react";
 import { ResumeData } from "@/data/types";
+import photo from "../../public/photo.jpg"
 
 export const RESUME_DATA: ResumeData = {
   name: "Ilya Gulya",
@@ -10,16 +11,17 @@ export const RESUME_DATA: ResumeData = {
   locationLink: "https://www.google.com/maps/place/Almaty",
   timezone: "UTC+5",
   about:
-    "Experienced Staff Software Engineer focused on building high-quality software in a timely manner. ",
+    "Experienced Staff Software Engineer and active open source contributor focused on building high-quality software in a timely manner. ",
   summary: (
     <span>
       Staff Software Engineer with over 10 years of experience in Android and cross-platform development.
+      Active open source contributor to various popular projects like Kotlin and Intellij IDEA.
       Seeking full-time Staff Software Engineer roles.
       I have experience leading development of applications in multiple domain areas including e-commerce,
       VOIP, multimedia, dating, AR and food delivery.
     </span>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/668727?v=4",
+  avatarUrl: photo.src,
   personalWebsiteUrl: "https://gulya.me",
   contact: {
     email: "ilya@gulya.me",
