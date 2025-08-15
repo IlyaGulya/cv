@@ -30,8 +30,8 @@ export type Work = {
   start: string;
   end: string;
   summary?: string;
-  techStack?: string[];
-  bullets?: (React.ReactElement | string)[];
+  techStack: string[];
+  bullets: (React.ReactElement | string)[];
 };
 
 export type ProjectLink = {
