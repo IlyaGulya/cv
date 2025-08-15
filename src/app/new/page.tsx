@@ -43,7 +43,7 @@ export default function Print() {
           ))}
         </section>
         <section>
-          <SectionTitle>Objective</SectionTitle>
+          <SectionTitle>Profile</SectionTitle>
           <p className="text-sm">{data.summary}</p>
         </section>
 

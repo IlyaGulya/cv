@@ -1,7 +1,7 @@
 import { QantorIcon, YandexIcon } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { ResumeData } from "@/data/types";
-import photo from "../../public/photo.jpg"
+import photo from "../../public/photo.jpg";
 
 export const RESUME_DATA: ResumeData = {
   name: "Ilya Gulya",
@@ -13,10 +13,8 @@ export const RESUME_DATA: ResumeData = {
     "Experienced Staff Software Engineer and active open source contributor focused on building high-quality software in a timely manner",
   summary: (
     <span>
-      Staff Software Engineer with over 10 years of experience in Android and cross-platform development.
-      Active open source contributor to various popular projects like Kotlin and Intellij IDEA.
-      I have experience leading development of applications in multiple domain areas including e-commerce,
-      VOIP, multimedia, dating, AR and food delivery.
+      <b>Staff Software Engineer</b> with 10+ years in e-commerce, ride-hailing, and food delivery.
+      I take a measurable, results-driven approach — leading mobile architecture overhauls, scaling developer productivity, and delivering revenue-enabling features at <b>Yandex</b>, <b>inDrive</b>.
     </span>
   ),
   avatarUrl: photo.src,
@@ -92,7 +90,7 @@ export const RESUME_DATA: ResumeData = {
         "Streamlined localization process by integrating with continuous localization provider",
         "Implemented runtime payment-provider switching, eliminating app releases for provider changes and accelerating rollouts.",
         "Delivered configurable white-label apps with zero code changes per client (config-only spin-ups).",
-        "Introduced NFC Tap-to-Phone, allowing in-store card acceptance on regular Android devices."
+        "Introduced NFC Tap-to-Phone, allowing in-store card acceptance on regular Android devices.",
       ],
       techStack: [
         "Kotlin",
@@ -109,7 +107,7 @@ export const RESUME_DATA: ResumeData = {
         "Clean Architecture",
         "Multi-module project",
         // "Gradle",
-        "Gitlab"
+        "Gitlab",
       ],
     },
     {
