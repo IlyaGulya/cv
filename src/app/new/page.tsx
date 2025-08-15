@@ -9,25 +9,25 @@ export default function Print() {
         className="m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white p-8 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none"
       >
         <section className="flex flex-row justify-center font-semibold text-2xl uppercase">
-          {RESUME_DATA.name}
+          {data.name}
         </section>
         <section className="flex flex-row justify-center text-sm gap-2">
-          <a href={`tel:${RESUME_DATA.contact.tel}`}>
-            <span>{RESUME_DATA.contact.tel}</span>
+          <a href={`tel:${data.contact.tel}`}>
+            <span>{data.contact.tel}</span>
           </a>
           <span>|</span>
-          <a href={RESUME_DATA.locationLink}>
-            <span>{RESUME_DATA.location}</span>
+          <a href={data.locationLink}>
+            <span>{data.location}</span>
           </a>
           <span>|</span>
-          <span>{RESUME_DATA.timezone}</span>
+          <span>{data.timezone}</span>
         </section>
         <section className="flex flex-row justify-center text-sm gap-2">
-          <a href={`mailto:${RESUME_DATA.contact.email}`}>
-            <span className="text-blue-500">{RESUME_DATA.contact.email}</span>
+          <a href={`mailto:${data.contact.email}`}>
+            <span className="text-blue-500">{data.contact.email}</span>
           </a>
           <span>|</span>
-          {RESUME_DATA.contact.social.map((social, index) => (
+          {data.contact.social.map((social, index) => (
             <>
               <a key={social.name} href={social.url}>
                 <span className="text-blue-500 print:hidden">{social.name}</span>
@@ -35,7 +35,7 @@ export default function Print() {
                   <span className="text-blue-500 hidden print:block">{social.url.replace("https://", "")}</span>
                 )}
               </a>
-              {index !== RESUME_DATA.contact.social.length - 1 && (
+              {index !== data.contact.social.length - 1 && (
                 <span>|</span>
               )}
             </>
@@ -43,12 +43,12 @@ export default function Print() {
         </section>
         <section>
           <SectionTitle>Objective</SectionTitle>
-          <p className="text-sm">{RESUME_DATA.summary}</p>
+          <p className="text-sm">{data.summary}</p>
         </section>
 
         <section>
           <SectionTitle>Skills</SectionTitle>
-          {Object.entries(RESUME_DATA.skills).map(([category, skills]) => (
+          {Object.entries(data.skills).map(([category, skills]) => (
             <div key={category} className="grid grid-cols-12 text-sm">
               <span className="font-semibold col-span-2">{category}</span>
               <span className="col-span-10">{skills.join(", ")}</span>
@@ -58,7 +58,7 @@ export default function Print() {
 
         <section className="text-sm">
           <SectionTitle>Experience</SectionTitle>
-          {RESUME_DATA.work.map((experience) => (
+          {data.work.map((experience) => (
             <div key={`${experience.start + experience.end + experience.title}`}>
               <div className="flex justify-between">
                 <span className="font-semibold">{experience.title}</span>
@@ -82,7 +82,7 @@ export default function Print() {
 
         <section>
           <SectionTitle>Education</SectionTitle>
-          {RESUME_DATA.education.map((education) => (
+          {data.education.map((education) => (
             <div key={education.school} className="text-sm">
               <div className="flex justify-between">
                 <p className="font-semibold">{education.degree}</p>
