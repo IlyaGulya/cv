@@ -11,12 +11,14 @@ export const RESUME_DATA: ResumeData = {
   timezone: "UTC+5",
   about:
     "Experienced Staff Software Engineer focused on building high-quality software in a timely manner. ",
-  summary: (<span>
-    Staff Software Engineer with over 9 years of experience in Android and cross-platform development.
-    Seeking full-time Staff Software Engineer roles.
-    I have experience leading development of applications in multiple domain areas including e-commerce,
-    VOIP, multimedia, dating, AR and food delivery.
-  </span>),
+  summary: (
+    <span>
+      Staff Software Engineer with over 10 years of experience in Android and cross-platform development.
+      Seeking full-time Staff Software Engineer roles.
+      I have experience leading development of applications in multiple domain areas including e-commerce,
+      VOIP, multimedia, dating, AR and food delivery.
+    </span>
+  ),
   avatarUrl: "https://avatars.githubusercontent.com/u/668727?v=4",
   personalWebsiteUrl: "https://gulya.me",
   contact: {
