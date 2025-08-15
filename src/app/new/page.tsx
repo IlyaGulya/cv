@@ -56,7 +56,7 @@ export default function Print() {
         </div>
 
         <SectionTitle>EXPERIENCE</SectionTitle>
-        <div className="space-y-3 mb-4">
+        <div className="space-y-6 mb-4">
           {data.work.map((xp) => {
             return (
               <div key={`${xp.start}${xp.end}${xp.title}`}>
