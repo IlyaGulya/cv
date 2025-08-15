@@ -1,6 +1,5 @@
 import { QantorIcon, YandexIcon } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
-import { TwitterIcon } from "lucide-react";
 import { ResumeData } from "@/data/types";
 import photo from "../../public/photo.jpg"
 
@@ -11,12 +10,11 @@ export const RESUME_DATA: ResumeData = {
   locationLink: "https://www.google.com/maps/place/Almaty",
   timezone: "UTC+5",
   about:
-    "Experienced Staff Software Engineer and active open source contributor focused on building high-quality software in a timely manner. ",
+    "Experienced Staff Software Engineer and active open source contributor focused on building high-quality software in a timely manner",
   summary: (
     <span>
       Staff Software Engineer with over 10 years of experience in Android and cross-platform development.
       Active open source contributor to various popular projects like Kotlin and Intellij IDEA.
-      Seeking full-time Staff Software Engineer roles.
       I have experience leading development of applications in multiple domain areas including e-commerce,
       VOIP, multimedia, dating, AR and food delivery.
     </span>
@@ -41,12 +39,6 @@ export const RESUME_DATA: ResumeData = {
         url: "https://github.com/IlyaGulya",
         icon: GitHubIcon,
       },
-      {
-        name: "Twitter",
-        url: "https://twitter.com/IlyaGulya",
-        icon: TwitterIcon,
-        hideForPrint: true,
-      },
     ],
   },
   education: [
@@ -59,59 +51,48 @@ export const RESUME_DATA: ResumeData = {
   ],
   work: [
     {
-      company: "QSale.io",
+      company: "inDrive",
       location: "Almaty, Kazakhstan",
-      link: "https://qantor.ru/",
+      link: "https://indrive.com/",
       badges: [],
-      title: "Staff Software Engineer",
-      logo: QantorIcon,
-      start: "February 2023",
+      title: "Developer Productivity Engineer",
+      logo: null,
+      start: "September 2024",
       end: "Present",
-      summary: "Leading the ongoing development of e-commerce platform",
+      summary: "Release train automation, mobile CI/CD improvements",
       bullets: [
-        "Fully migrated to Jetpack Compose using custom Design System greatly improving time to market",
-        "Implemented ability to easily configure white-label applications without code changes",
-        "Integrated Weblate into CI pipeline allowing seamless translation process",
-        "Configured CI, reducing build times by 70% and improving development experience",
-        "Integrated Huawei Mobile Services and configured AppGallery publication",
-        "Supported NFC payments allowing retail employees to accept bank card payments using their phones",
+        <>Migrated CI from bare-metal runners to Kubernetes: <b>queue reduction from ~50 min to stable ~2 min</b></>,
+        <>Average job duration went <b>from ~40 min to ~18 min</b> via dedicated autoscaled runners and remote cache</>,
+        <>Cut end-to-end time-to-feedback per change <b>from up to ~110 min to ~20 min</b></>,
+        <>Introduced <b>CI/CD observability toolkit</b> — Grafana dashboards & alerts greatly improving transparency</>,
       ],
       techStack: [
-        "Kotlin",
-        "RxJava",
-        "Kotlin Coroutines",
-        "Arrow.kt",
-        "MVIKotlin",
-        "Decompose",
-        "Jetpack Compose",
-        "Retrofit",
-        "Cicerone",
-        "Dagger 2 + Anvil",
-        "MVI",
-        "Clean Architecture",
-        "Multi-module project",
-        // "Gradle",
-        "Gitlab",
+        "GitHub Actions",
+        "Gradle",
+        "Kubernetes",
+        "Helm",
+        "Docker",
+        "Grafana",
+        "Prometheus",
+        "AWS",
       ],
     },
     {
       company: "QSale.io",
       location: "Almaty, Kazakhstan",
-      link: "https://qantor.ru/",
+      link: "https://qsale.io/",
       badges: [],
-      title: "Staff Software Engineer | Engineering Manager - Mobile",
+      title: "Staff Software Engineer → Engineering Manager, Mobile",
       logo: QantorIcon,
       start: "November 2021",
-      end: "February 2023",
-      summary: `Led the ongoing
-        development of customer and employee applications for largest jewellery store in Russia. 
-        I've managed both the Android and iOS development teams.`,
+      end: "August 2024",
+      summary: "Led Android & iOS teams delivering customer and employee apps and the core e-commerce platform for Russia’s largest jewellery retailer.",
       bullets: [
-        "Integrated modern and reliable architecture for robust and maintainable codebase",
-        "Unified architectural approach in iOS and Android teams without sacrificing time to market",
-        "Led Android project modularization improving component decoupling and reducing build times by 60%. This also helped in future ",
-        "Led implementation of employee referral program, resulting in increased revenue",
-        "Let customer payment flow improvement, allowing dynamic payment provider switching without releasing new app version",
+        "Reduced Android build times by up to 70% via CI and Gradle overhaul",
+        "Streamlined localization process by integrating with continuous localization provider",
+        "Implemented runtime payment-provider switching, eliminating app releases for provider changes and accelerating rollouts.",
+        "Delivered configurable white-label apps with zero code changes per client (config-only spin-ups).",
+        "Introduced NFC Tap-to-Phone, allowing in-store card acceptance on regular Android devices."
       ],
       techStack: [
         "Kotlin",
@@ -128,7 +109,7 @@ export const RESUME_DATA: ResumeData = {
         "Clean Architecture",
         "Multi-module project",
         // "Gradle",
-        "Gitlab",
+        "Gitlab"
       ],
     },
     {
@@ -140,18 +121,12 @@ export const RESUME_DATA: ResumeData = {
       logo: YandexIcon,
       start: "March 2019",
       end: "November 2021",
-      summary: `My role involved guiding the technical direction of the Yandex.Eats Android 
-       team. This included, but was not limited to: architectural decisions, 
-       refactoring planning, configuration and performance management 
-       of CI/CD, and development of critical functionality.`,
+      summary: "Owned Android technical direction for Yandex.Eats Android application, CI/CD performance, and high-impact features that accelerated delivery and drove revenue.",
       bullets: [
-        "Pioneered the server-driven UI in the team, letting the development team to focus on more important tasks and increasing flexibility for content managers. This improvement led to a new revenue stream through the sale of ads on the catalog",
-        "Revamped the CI pipeline, making its configuration easier to maintain and reducing build times by 50%",
-        "Set up remote builds for all team members, reducing the workload on their computers and increasing their productivity",
-        "Fully refactored the navigation within the application, making it more flexible and error-prone",
-        "Refactored the application into modular components, allowing for tighter integration with other Yandex services through the reuse of code from the application",
-        "Successfully completed complex integration of Yandex company-wide SSO solution, allowing users to log in with their Yandex account. This allowed users to use their Yandex.Plus loyalty program benefits in the application",
-        "Led the integration of Huawei Mobile Services and publication to the Huawei AppGallery",
+        "Suggested and led server-driven UI implementation, greatly reducing content-related development task amount. This enabled new revenue stream (ad placement) and greatly shortened content managers feedback loop.",
+        "Suggested and delivered huge app navigation overhaul completely eliminating large portion of tech debt and unlocking the team for meaningful deliverables",
+        "Cut Android CI build times by ~50% through pipeline redesign",
+        "Integrated company-wide Yandex SSO, enabling Yandex.Plus loyalty program integration",
       ],
       techStack: [
         "Kotlin",
@@ -226,10 +201,18 @@ export const RESUME_DATA: ResumeData = {
       "SQLite",
       "RxJava",
     ],
+    "DevOps": [
+      "Docker",
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Karpenter",
+      "AWS",
+    ],
     "CI/CD": [
       "Github Actions",
-      "TeamCity",
       "Gitlab CI",
+      "TeamCity",
       "Fastlane",
     ],
     "Android": [
@@ -263,6 +246,7 @@ export const RESUME_DATA: ResumeData = {
       "Dagger 2",
       "Anvil",
       "Hilt",
+      "kotlin-inject",
       "Koin",
       "Toothpick",
     ],

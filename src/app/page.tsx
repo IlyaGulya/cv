@@ -7,6 +7,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import { Fragment } from "react";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - CV`,
@@ -150,8 +151,8 @@ export default function Page() {
                   )}
                   {work.bullets?.length && (
                     <ul className="list-disc list-inside text-s text-accent-foreground">
-                      {work.bullets.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
+                      {work.bullets.map((bullet, index) => (
+                        <li key={index}>{bullet}</li>
                       ))}
                     </ul>
                   )}
@@ -184,14 +185,14 @@ export default function Page() {
           <h2 className="text-xl font-bold">Skills</h2>
           {Object.entries(RESUME_DATA.skills).map(([category, skills]) => {
             return (
-              <div key={category}>
+              <Fragment key={category}>
                 <h3 className="text-lg font-semibold">{category}</h3>
                 <div className="flex flex-wrap gap-1">
                   {skills.map((skill) => {
                     return <Badge key={skill}>{skill}</Badge>;
                   })}
                 </div>
-              </div>
+              </Fragment>
             );
           })}
         </Section>

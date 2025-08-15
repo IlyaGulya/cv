@@ -1,3 +1,4 @@
+import React, { Fragment } from "react";
 import { RESUME_DATA } from "@/data/resume-data";
 
 const data = RESUME_DATA;
@@ -28,8 +29,8 @@ export default function Print() {
           </a>
           <span>|</span>
           {data.contact.social.map((social, index) => (
-            <>
-              <a key={social.name} href={social.url}>
+            <Fragment key={social.name}>
+              <a href={social.url}>
                 <span className="text-blue-500 print:hidden">{social.name}</span>
                 {!social.hideForPrint && (
                   <span className="text-blue-500 hidden print:block">{social.url.replace("https://", "")}</span>
@@ -38,7 +39,7 @@ export default function Print() {
               {index !== data.contact.social.length - 1 && (
                 <span>|</span>
               )}
-            </>
+            </Fragment>
           ))}
         </section>
         <section>
@@ -61,18 +62,18 @@ export default function Print() {
           {data.work.map((experience) => (
             <div key={`${experience.start + experience.end + experience.title}`}>
               <div className="flex justify-between">
-                <span className="font-semibold">{experience.title}</span>
+                <span className="font-semibold">{experience.title} @ <a href={experience.link}>{experience.company}</a></span>
                 <span>{experience.start} - {experience.end}</span>
               </div>
               <div className="flex justify-between">
-                <a href={experience.link}>{experience.company}</a>
+                <span></span>
                 <span>{experience.location}</span>
               </div>
               <p><b>Tech stack: </b> {experience.techStack?.join(", ")}</p>
               {experience.bullets && experience.bullets.length > 0 && (
                 <ul className="pl-4 pt-1 pb-1 list-disc list-inside">
-                  {experience.bullets.map(bullet => (
-                    <li key={bullet}>{bullet}</li>
+                  {experience.bullets.map((bullet, index) => (
+                    <li key={index}>{bullet}</li>
                   ))}
                 </ul>
               )}

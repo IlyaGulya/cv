@@ -31,7 +31,7 @@ export type Work = {
   end: string;
   summary?: string;
   techStack?: string[];
-  bullets?: string[];
+  bullets?: (React.ReactElement | string)[];
 };
 
 export type ProjectLink = {
