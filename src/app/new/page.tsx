@@ -4,9 +4,6 @@ import { RESUME_DATA } from "@/data/resume-data"
 
 const data = RESUME_DATA
 
-// helper: keep only the strongest bullets for recent roles
-const topBullets = (bullets?: React.ReactNode[], max = 3) => (bullets ?? []).slice(0, max)
-
 export default function Print() {
   return (
     <div className="grid min-h-screen font-sans place-items-center bg-gray-400">
@@ -31,7 +28,7 @@ export default function Print() {
                 <a href={`mailto:${data.contact.email}`} className="text-blue-600 hover:underline">
                   {data.contact.email}
                 </a>
-                {data.contact.social.map((s, i) => (
+                {data.contact.social.map((s) => (
                   <Fragment key={s.name}>
                     <span className="mx-2 text-black">|</span>
                     <a href={s.url} className="text-blue-600 hover:underline">
@@ -60,7 +57,7 @@ export default function Print() {
 
         <SectionTitle>EXPERIENCE</SectionTitle>
         <div className="space-y-3 mb-4">
-          {data.work.map((xp, idx) => {
+          {data.work.map((xp) => {
             return (
               <div key={`${xp.start}${xp.end}${xp.title}`}>
                 <div className="flex justify-between items-start mb-1">
