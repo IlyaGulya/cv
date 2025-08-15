@@ -105,6 +105,6 @@ export type SectionTitleProps = {
 const SectionTitle: React.FC<SectionTitleProps> = props => (
   <>
     <h1 className="text-sm mt-4 font-semibold uppercase">{props.children}</h1>
-    <span className="border-[0.5px] border-black flex-grow flex mb-1"></span>
+    <span className="border-[0.5px] border-black grow flex mb-1"></span>
   </>
 );
