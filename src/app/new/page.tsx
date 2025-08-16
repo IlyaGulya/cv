@@ -75,8 +75,15 @@ export default function Print() {
                   </div>
                 </div>
 
+                {xp.summary && (
+                  <div className="mb-1">
+                    <span className="font-bold text-black">Summary:</span>
+                    <span className="ml-1 text-black">{xp.summary}</span>
+                  </div>
+                )}
+
                 {xp.techStack.length > 0&& (
-                  <div className="mb-2">
+                  <div className="mb-1">
                     <span className="font-bold text-black">Tech stack:</span>
                     <span className="ml-1 text-black">{xp.techStack.join(", ")}</span>
                   </div>
