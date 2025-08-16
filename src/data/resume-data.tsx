@@ -57,7 +57,7 @@ export const RESUME_DATA: ResumeData = {
       logo: null,
       start: "September 2024",
       end: "Present",
-      summary: "Release train automation, release support, mobile CI/CD improvements, developer experience",
+      summary: "Release train automation, release support, mobile CI/CD maintenance, developer experience",
       bullets: [
         <>Migrated CI from bare-metal runners to Kubernetes: <b>queue reduction from ~50 min to stable ~2 min</b></>,
         <>Average job duration went <b>from ~40 min to ~18 min</b> via dedicated autoscaled runners and remote cache</>,
