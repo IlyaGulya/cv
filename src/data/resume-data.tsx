@@ -15,6 +15,7 @@ export const RESUME_DATA: ResumeData = {
     <span>
       <b>Staff Software Engineer</b> with 10+ years in e-commerce, ride-hailing, and food delivery.
       I take a measurable, results-driven approach — leading mobile architecture overhauls, scaling developer productivity, and delivering revenue-enabling features at <b>Yandex</b>, <b>inDrive</b>.
+      Proficient in AI-assisted development.
     </span>
   ),
   avatarUrl: photo.src,
@@ -162,6 +163,7 @@ export const RESUME_DATA: ResumeData = {
     "Android/KMP": ["KMP", "Compose", "Decompose", "Coroutines/RxJava", "MVI/MVVM", "Multi-module", "Dagger/Anvil"],
     "DevOps/CI": ["GitHub Actions", "Kubernetes", "Helm", "ArgoCD", "AWS", "GitLab CI", "TeamCity"],
     "Cross-platform": ["Compose Multiplatform", "React Native", "Flutter"],
+    "AI/ML": ["Claude API", "OpenAI API", "LangChain", "AI-assisted development", "Code generation", "Prompt engineering"],
   },
   projects: [],
 };
